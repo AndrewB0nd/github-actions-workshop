@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: Notify Issue
         run: |
-          echo "New issue has been opened by ${{ github.user }}"
+          echo "New issue has been opened by ${{ github.actor }}"
           echo "The issue was titled: ${{ github.event.issue.title }}"

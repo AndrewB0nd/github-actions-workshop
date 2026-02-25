@@ -1,0 +1,12 @@
+name: Cow Says
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read the output
+        run: |
+          echo "Cow goes moo!"
