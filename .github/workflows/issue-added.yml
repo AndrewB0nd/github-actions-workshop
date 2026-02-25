@@ -1,0 +1,14 @@
+name: Issue Found! A user has found an issue.
+
+on: 
+  issues:
+    types: [opened]
+
+jobs:
+  print-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Issue
+        run: |
+          echo "New issue has been opened by ${{ github.user }}"
+          echo "The issue was titled: ${{ github.event.issue.title }}"
